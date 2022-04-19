@@ -1,12 +1,66 @@
-html, bordy{
+html, body{
     margin: 0px;
     padding: 0px;
     height: 100%;
-    width: :100%;
+    width: 100%;
 }
 
 .container{
     width: 100%;
     height: 100%;
     background-color: lime;
+    display: grid;
+    grid-template-columns:100%;
+    grid-template-rows: 15% 50% 20% 15%;
+    grid-template-areas: "header"
+                         "content"
+                         "sidebar"
+                         "footer";
+    /* grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "header header header"
+                         "content content content"
+                         "sidebar sidebar sidebar"
+                         "footer footer footer";
+    /*column-gap: 5px;
+    row-gap: 10px;*/
+    gap: 0px;
+    /*gap: 15px;
+    justify-content: center;*/
+}
+
+/*mobile device*/
+@media screen and (max-width:480px){
+    .container{
+        background-color: red;
+    }
+}
+
+
+.div1{
+    /*width: 100px;
+    height: 100px;*/
+    grid-area: header;
+    background-color: magenta;
+}
+
+.div2{
+    /*width: 100px;
+    height: 100px;*/
+    grid-area: content;
+    background-color: tomato;
+}
+
+.div3{
+    /*width: 100px;
+    height: 100px;*/
+    grid-area: sidebar;
+    background-color: aqua;
+}
+
+.div4{
+    /*width: 100px;
+    height: 100px;*/
+    grid-area: footer;
+    background-color: darkgreen;
 }
